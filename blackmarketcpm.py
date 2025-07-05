@@ -3,9 +3,9 @@ import os
 import json
 from time import sleep
 
-# © Lynx | DPR_LynX_Lovers — 2025
+# © Yin Yang | Black Market CPM — 2025
 # No stealing. No tracing. No funny business.
-# Engineered in the shadows by DPRLynX on June 16th, 2025
+# Engineered in the shadows by Yin Yang on July 6th, 2025
 
 BASE_URL: str = "https://cybercpm.store/api"
 
