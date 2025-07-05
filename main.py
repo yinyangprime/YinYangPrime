@@ -7,7 +7,7 @@ import os, signal, sys
 import subprocess
 import progressbar
 from getpass import getpass
-from cybercpm import CyberCPM
+from blackmarketcpm import YinYangPrime
 from pystyle import Add, Center, Anime, Colors, Colorate, Write, System
 from colorama import Fore, Style, init
 from pystyle import System as pySystem
@@ -16,12 +16,12 @@ from colorama import Fore, Style, init
 import progressbar
 import time
 
-# © Lynx | DPR_LynX_Lovers — 2025
+# © Yin Yang | Black Market CPM — 2025
 # No stealing. No tracing. No funny business.
-# Engineered in the shadows by DPRLynX on June 16th, 2025
+# Engineered in the shadows by Yin Yang on July 6th, 2025
 
-__CHANNEL_USERNAME__ = "DPR_LynXLovers"
-__GROUP_USERNAME__   = "DPR_LynX"
+__CHANNEL_USERNAME__ = "𝓑𝓛𝓐𝓒𝓚 𝓜𝓐𝓡𝓚𝓔𝓣 𝓒𝓟𝓜 𝓜𝓨 🇲🇾"
+__GROUP_USERNAME__   = "𝓑𝓛𝓐𝓒𝓚 𝓜𝓐𝓡𝓚𝓔𝓣 𝓒𝓟𝓜 𝓜𝓨 🇲🇾"
 
 init(autoreset=True)
 
@@ -73,22 +73,31 @@ def show_progress(message="Loading...", duration=1):
     print()
 
 
-
-banner = """
-╔════════════════════════════════════════════════════╗
-║                                                    ║
-║           ╔═══╗───╔╗──────╔═══╗                    ║
-║           ║╔═╗║───║║──────║╔═╗║                    ║
-║           ║║─╚╬╗─╔╣╚═╦══╦═╣║─╚╬══╦═╦══╗            ║
-║           ║║─╔╣║─║║╔╗║║═╣╔╣║─╔╣╔╗║╔╣║═╣            ║
-║           ║╚═╝║╚═╝║╚╝║║═╣║║╚═╝║╚╝║║║║═╣            ║
-║           ╚═══╩═╗╔╩══╩══╩╝╚═══╩══╩╝╚══╝            ║
-║           ────╔═╝║                                 ║
-║           ────╚══╝                                 ║
+                                                         
+             ,,                                          
+`7MM"""Yp, `7MM                 `7MM                     
+  MM    Yb   MM                   MM                     
+  MM    dP   MM   ,6"Yb.  ,p6"bo  MM  ,MP'               
+  MM"""bg.   MM  8)   MM 6M'  OO  MM ;Y                  
+  MM    `Y   MM   ,pm9MM 8M       MM;Mm                  
+  MM    ,9   MM  8M   MM YM.    , MM `Mb.                
+.JMMmmmd9  .JMML.`Moo9^Yo.YMbmd'.JMML. YA.               
+                                                         
+                                                         
+                                                         
+                                                         
+`7MMM.     ,MMF'                `7MM               mm    
+  MMMb    dPMM                    MM               MM    
+  M YM   ,M MM   ,6"Yb.  `7Mb,od8 MM  ,MP'.gP"Ya mmMMmm  
+  M  Mb  M' MM  8)   MM    MM' "' MM ;Y  ,M'   Yb  MM    
+  M  YM.P'  MM   ,pm9MM    MM     MM;Mm  8M""""""  MM    
+  M  `YM'   MM  8M   MM    MM     MM `Mb.YM.    ,  MM    
+.JML. `'  .JMML.`Moo9^Yo..JMML. .JMML. YA.`Mbmmd'  `Mbmo 
+                                                                                                            
 ╠════════════════════════════════════════════════════╣
-║               ⚡ CyberCPM TOOLS ⚡                 ║
+║               ⚡ BLACK MARKET TOOLS ⚡             ║
 ║           Car Parking Multiplayer Utilities        ║
-║           Coded by: ɖքʀ•ʟʏռӼ | © 2025              ║
+║           Coded by: Yin Yang | © 2025              ║
 ╚════════════════════════════════════════════════════╝
             [ Press Enter to continue ]
 """[1:]
@@ -98,9 +107,9 @@ System.Clear()
 def banner():
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
-    print(Colorate.Horizontal(Colors.red_to_yellow, "CPM2 Tools Version: 1.02.4 || Author https://t.me/@DPR_LynX"))
+    print(Colorate.Horizontal(Colors.red_to_yellow, "CPM2 Tools Version: 1.02.4 || Author https://t.me/XIIXMMI"))
     print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
-    print("< Wajib Logout Account CPM Sebelum Menggunakan Tools Ini >")
+    print("< Must Logout CPM Account Before Using These Tools >")
 
 def load_key_data(cpm):
     data = cpm.get_key_data()
@@ -142,19 +151,19 @@ def load_player_data(cpm):
             cpm.get_all_player_cars()
             count_saved_cars()
         else:
-            print("{Fore.RED}  [!] Upss. Sepertinya ada yang salah dengan akun anda, Silakan gunakan akun lain.")
+            print("{Fore.RED}  [!] Upss. There seems to be something wrong with your account, Please use another account.")
             exit(1)
 
 def prompt_valid_value(content, tag, password=False):
     while True:
         value = input(f"{content}: " if not password else getpass(f"{content}: "))
         if not value or value.isspace():
-            print(f"{Fore.RED}  ---[{Style.RESET_ALL} tidak boleh kosong Silakan coba lagi.")
+            print(f"{Fore.RED}  ---[{Style.RESET_ALL} cannot be empty Please try again.")
         else:
             return value
 
 def signal_handler(sig, frame):
-    print(f'\n{Fore.RED}  ---[ Program dihentikan ]---\n')
+    print(f'\n{Fore.RED}  ---[ Program stopped ]---\n')
     exit(0)
 
 def cariid(urutan):
@@ -171,7 +180,7 @@ if __name__ == "__main__":
         acc_password = prompt_valid_value(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Password", "Password", False)
         acc_access_key = prompt_valid_value(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Access Key", "Access Key", False)
         print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Attempting login... ", end="")
-        cpm = CyberCPM(acc_access_key)
+        cpm = Yin Yang(acc_access_key)
         login_response = cpm.login(acc_email, acc_password)
 
         if login_response != 0:
@@ -203,29 +212,29 @@ if __name__ == "__main__":
             cpm.save_player_slots_collection()
             print(Colorate.Horizontal(Colors.green_to_white, "=" * 25 + "[ MENU ]" + "=" * 25))
             print(f"  [{Fore.GREEN}01{Style.RESET_ALL}] Change Name {Fore.YELLOW}Free")
-            print(f"  [{Fore.GREEN}02{Style.RESET_ALL}] Change Money {Fore.YELLOW}3000")
-            print(f"  [{Fore.GREEN}03{Style.RESET_ALL}] Finish All Levels Done {Fore.YELLOW}10000")
-            print(f"  [{Fore.GREEN}04{Style.RESET_ALL}] Remove Male Face {Fore.YELLOW}3000")
-            print(f"  [{Fore.GREEN}05{Style.RESET_ALL}] Remove Female Face {Fore.YELLOW}3000")
-            print(f"  [{Fore.GREEN}06{Style.RESET_ALL}] Unlock All Male Attributes {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}07{Style.RESET_ALL}] Unlock All Female Attributes {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}08{Style.RESET_ALL}] Unlock All Animations {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}09{Style.RESET_ALL}] Unlock All Homes {Fore.YELLOW}20000")
-            print(f"  [{Fore.GREEN}10{Style.RESET_ALL}] Unlock All Paints {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}11{Style.RESET_ALL}] Unlock All Wheels {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}12{Style.RESET_ALL}] Unlock Brakes {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}13{Style.RESET_ALL}] Unlock Calipers {Fore.YELLOW}15000")
-            print(f"  [{Fore.GREEN}14{Style.RESET_ALL}] Unlock Sound Police {Fore.YELLOW}7500")
-            print(f"  [{Fore.GREEN}15{Style.RESET_ALL}] Unlock Police {Fore.YELLOW}10000")
-            print(f"  [{Fore.GREEN}16{Style.RESET_ALL}] Unlock Bodykits {Fore.YELLOW}10000")
-            print(f"  [{Fore.GREEN}17{Style.RESET_ALL}] Unlock Cars {Fore.YELLOW}3000")
-            print(f"  [{Fore.GREEN}18{Style.RESET_ALL}] Swap Gearbox AWD {Fore.YELLOW}10000")
+            print(f"  [{Fore.GREEN}02{Style.RESET_ALL}] Change Money {Fore.YELLOW}RM5")
+            print(f"  [{Fore.GREEN}03{Style.RESET_ALL}] Finish All Levels Done {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}04{Style.RESET_ALL}] Remove Male Face {Fore.YELLOW}RM5")
+            print(f"  [{Fore.GREEN}05{Style.RESET_ALL}] Remove Female Face {Fore.YELLOW}RM5")
+            print(f"  [{Fore.GREEN}06{Style.RESET_ALL}] Unlock All Male Attributes {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}07{Style.RESET_ALL}] Unlock All Female Attributes {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}08{Style.RESET_ALL}] Unlock All Animations {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}09{Style.RESET_ALL}] Unlock All Homes {Fore.YELLOW}RM15")
+            print(f"  [{Fore.GREEN}10{Style.RESET_ALL}] Unlock All Paints {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}11{Style.RESET_ALL}] Unlock All Wheels {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}12{Style.RESET_ALL}] Unlock Brakes {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}13{Style.RESET_ALL}] Unlock Calipers {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}14{Style.RESET_ALL}] Unlock Sound Police {Fore.YELLOW}RM5")
+            print(f"  [{Fore.GREEN}15{Style.RESET_ALL}] Unlock Police {Fore.YELLOW}RM5")
+            print(f"  [{Fore.GREEN}16{Style.RESET_ALL}] Unlock Bodykits {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}17{Style.RESET_ALL}] Unlock Cars {Fore.YELLOW}RM10")
+            print(f"  [{Fore.GREEN}18{Style.RESET_ALL}] Swap Gearbox AWD {Fore.YELLOW}RM5")
             print(f"  [{Fore.GREEN}00{Style.RESET_ALL}] Exit Tool")
             print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
             choice = input(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Select menu [01-18]: ").strip()
 
             if choice == "00":
-                print(f"{Fore.CYAN}  ---[ Thanks for using our tool!\n ---[  Join our Telegram group: @DPR_LynX")
+                print(f"{Fore.CYAN}  ---[ Thanks for using our tool!\n ---[  Join our Telegram group: @BlackMarketCPM")
                 sys.exit()
 
             elif choice == "01":
@@ -249,7 +258,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 3000
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Enter your desired amount of money.")
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Max 50,000,000.")
@@ -273,7 +282,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 10000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Complete all levels.")
                 if not is_unlimited and coins < required_coins:
@@ -292,7 +301,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 3000
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Remove male face.")
                 if not is_unlimited and coins < required_coins:
@@ -311,7 +320,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 3000
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Remove female face.")
                 if not is_unlimited and coins < required_coins:
@@ -330,7 +339,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all male attributes.")
                 if not is_unlimited and coins < required_coins:
@@ -349,7 +358,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all female attributes.")
                 if not is_unlimited and coins < required_coins:
@@ -368,7 +377,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all animations.")
                 if not is_unlimited and coins < required_coins:
@@ -387,7 +396,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 20000
+                required_coins = RM15
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all homes.")
                 if not is_unlimited and coins < required_coins:
@@ -406,7 +415,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all paints.")
                 if not is_unlimited and coins < required_coins:
@@ -425,7 +434,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock all wheels.")
                 if not is_unlimited and coins < required_coins:
@@ -444,7 +453,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock brakes.")
                 if not is_unlimited and coins < required_coins:
@@ -463,7 +472,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 15000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock calipers.")
                 if not is_unlimited and coins < required_coins:
@@ -482,7 +491,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 7500
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 58))
                 print(f"{Fore.CYAN}  ---[{Style.RESET_ALL} Unlock sound police.")
                 if not is_unlimited and coins < required_coins:
@@ -501,7 +510,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 10000
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 21 + "[ Unlock Police ]" + "=" * 21))
                 if not is_unlimited and coins < required_coins:
                     print(f"{Fore.RED}  ---[{Style.RESET_ALL} Balance tidak mencukupi. Diperlukan {required_coins} koin.")
@@ -546,7 +555,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 10000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 21 + "[ Unlock Bodykits ]" + "=" * 21))
                 if not is_unlimited and coins < required_coins:
                     print(f"{Fore.RED}  ---[{Style.RESET_ALL} Balance tidak mencukupi. Diperlukan {required_coins} koin.")
@@ -591,7 +600,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 3000
+                required_coins = RM5
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 21 + "[ Unlock Cars ]" + "=" * 22))
                 if not is_unlimited and coins < required_coins:
                     print(f"{Fore.RED}  ---[{Style.RESET_ALL} Balance tidak mencukupi. Diperlukan {required_coins} koin.")
@@ -636,7 +645,7 @@ if __name__ == "__main__":
                 key_data = cpm.get_key_data()
                 is_unlimited = key_data.get("is_unlimited", False)
                 coins = key_data.get("coins", 0)
-                required_coins = 10000
+                required_coins = RM10
                 print(Colorate.Horizontal(Colors.green_to_white, "=" * 18 + "[ Swap Gearbox To AWD ]" + "=" * 17))
                 if not is_unlimited and coins < required_coins:
                     print(f"{Fore.RED}  ---[{Style.RESET_ALL} Balance tidak mencukupi. Diperlukan {required_coins} koin.")
